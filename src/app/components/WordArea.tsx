@@ -5,6 +5,7 @@ import { AppContext } from './context'
 import LoadingSkeleton from './LoadingSkeleton'
 import WordHeader from './WordHeader'
 import Meanings from './Meanings'
+import SourceList from './SourceList'
 
 const WordArea = () => {
   const { isLoading } = useContext(AppContext)
@@ -17,6 +18,7 @@ const WordArea = () => {
       <>
         <WordHeader />
         <Meanings />
+        <SourceList />
       </>
     )
   }

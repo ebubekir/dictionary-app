@@ -1,16 +1,14 @@
 import Definition from './Definition'
-
-interface DefinitionType {
-  definition: string
-  synonymus: Array<string>
-  antonyms: Array<string>
-}
+import SubText from './SubText'
+import { DefinitionType } from './types'
 
 interface Props {
   definitions: Array<DefinitionType>
+  synonyms?: Array<string>
+  antonyms?: Array<string>
 }
 
-const DefinitionList = ({ definitions }: Props) => (
+const DefinitionList = ({ definitions, synonyms = [], antonyms = [] }: Props) => (
   <div>
     <h3 className="text-gray-500 text-xl font-medium">Meaning</h3>
     <ol className="list-disc pl-8 marker:text-violet-400 space-y-2 mt-2 ">
@@ -18,6 +16,8 @@ const DefinitionList = ({ definitions }: Props) => (
         <Definition key={idx} definition={item.definition} />
       ))}
     </ol>
+    {synonyms?.length > 0 && <SubText text="Synonyms" words={synonyms} />}
+    {antonyms?.length > 0 && <SubText text="Antonyms" words={antonyms} />}
   </div>
 )
 
