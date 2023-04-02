@@ -39,9 +39,11 @@ export const AppContextProvider = ({ children }: Props) => {
         setWord(w)
       }
       const REQUEST_URL: string = url + w
-      return axios.get(REQUEST_URL).then((res) => res.data)
+      return axios.get(REQUEST_URL).then((res) => res.data[0])
     },
   )
+
+  console.log('data', data)
 
   const context = useMemo(
     () => ({

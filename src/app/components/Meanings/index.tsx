@@ -1,11 +1,5 @@
-import PartOfSpeech from './PartOfSpeech'
-import DefinitionList from './DefinitionList'
+import PartOfSpeechList from './PartOfSpeechList'
 
-const Meanings = () => (
-  <>
-    <PartOfSpeech />
-    <DefinitionList />
-  </>
-)
+const Meanings = () => <PartOfSpeechList />
 
 export default Meanings

@@ -34,6 +34,7 @@ module.exports = {
     'object-curly-newline': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
     'no-underscore-dangle': 'off',
+    'react/no-array-index-key': 'off',
     'import/no-extraneous-dependencies': ['off', { devDependencies: true }],
   },
 }

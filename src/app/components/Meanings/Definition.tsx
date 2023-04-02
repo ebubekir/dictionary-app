@@ -1,5 +1,7 @@
-const Definition = () => (
-  <li>(etc.) A set of keys used to operate a typewriter, computer etc.</li>
-)
+interface Prop {
+  definition?: string
+}
+
+const Definition = ({ definition }: Prop) => <li>{definition}</li>
 
 export default Definition
